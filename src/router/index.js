@@ -13,6 +13,9 @@ import UserSettings from '@/vuex-project/usersetting/UserSettings'
 import UserEmailsSubscriptions from '@/vuex-project/usersetting/email'
 import UserProfilePreview from '@/vuex-project/usersetting/profile'
 
+
+//main
+import {myrouter} from './router'
 const Checkout = () => import('@/view/checkout')
 
 Vue.use(Router)
@@ -87,6 +90,11 @@ export default new Router({
           helper: UserProfilePreview
         }
       }]
-    }
+    },
+    ...myrouter,
+    {
+      path:'*',
+      redirect:'/',
+    },
   ]
 })
