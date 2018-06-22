@@ -7,7 +7,12 @@
 
 <script>
     export default {
-        name: "nav-bar"
+        name: "nav-bar",
+        data(){
+          return {
+
+          }
+        }
     }
 </script>
 
